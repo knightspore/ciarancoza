@@ -6,8 +6,8 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Iosevka', 'sans-serif'],
-                mono: ['Iosevka', 'monospace'],
+                sans: ['var(--font-sans)', 'sans-serif'],
+                mono: ['var(--font-mono)', 'monospace'],
             },
             colors: {
                 coral: {

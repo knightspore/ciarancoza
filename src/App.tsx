@@ -1,11 +1,10 @@
+import Header from "./components/header"
 import { useEffect, useState } from "react"
+import Link from "./components/link"
+import Card from "./components/card"
+import Section from "./components/section"
+import Nav from "./components/nav"
 
-const BIO = <>
-    I'm a software engineer / musician from Cape Town, South Africa. I have a keen interest in art and computers, history and people.
-    I've been working as a software engineer for the past few years, and before that I spent a lot of time <Link href="#music">making
-        music</Link>, doing <Link href="#design">graphic design</Link>, and occasionally <Link href="#modelling">a bit
-            of modelling</Link>.
-</>
 
 const KEYWORD_MAP = [
     ["hitch", "hiker"],
@@ -45,26 +44,10 @@ export default function App() {
     }
 
     return (
-        <div className={`p-4 max-w-[800px] mx-auto mb-12`}>
-
-            <nav className="flex flex-wrap gap-2 uppercase text-sm font-black">
-                <Link href="#projects"><span className="text-coral-500">&gt;</span> Projects</Link>
-                <Link href="#music"><span className="text-coral-500">&gt;</span> Music</Link>
-                <Link href="#blog"><span className="text-coral-500">&gt;</span> Writing</Link>
-                <Link href="#open-source"><span className="text-coral-500">&gt;</span> Open Source</Link>
-                <Link href="#contact"><span className="text-coral-500">&gt;</span> Contact</Link>
-            </nav>
-
-            <header className="mt-4">
-                <h1>
-                    <span className="text-xs font-bold">Hi, I'm<br /></span>
-                    <span className="text-2xl mt-2">Ciarán</span>
-                </h1>
-                <p className="mt-4">{BIO}</p>
-            </header>
-
+        <div className="p-4 max-w-[800px] mx-auto pb-12">
+            <Nav />
+            <Header />
             <div id="content" className="mt-8 space-y-8">
-
                 <Section
                     id="projects"
                     title="Projects &amp; Experiments"
@@ -76,7 +59,7 @@ export default function App() {
                                 A basic RSS/Atom feed parser written in Typescript, using Bun, with full test coverage. It can parse feeds and create an AST of the feed in JSON.
                                 Very fun to write since there's so much writing online on XML parsers.
                             </p>
-                            <p>Try it out: <code className="bg-shell-400 text-shell-900 px-1 rounded">npm install xml-trap</code></p>
+                            <p>Try it out: <code className="bg-shell-500 text-shell-50 px-1 rounded">npm install xml-trap</code></p>
                             <div>
                                 <Link href="https://github.com/knightspore/xml-trap/">XML Trap on Github</Link>
                             </div>
@@ -122,12 +105,12 @@ export default function App() {
                                 secret password. The goal is for the guest to talk to other attendees and find their matching password partner. They then consule the all-knowing
                                 computer and the first pairs to do so win a prize (just about everyone ended up receiving a prize in the end).
                             </p>
-                            <p>You can check out the project here, and get a random password below. Get a friend to open this page and try and find matching clues!</p>
+                            <p>You can check out the project at the link below, and get a random password underneath that. Get a friend to open this page and try and find matching clues!</p>
                             <div>
                                 <Link href="https://talis-42.vercel.app/">Play the Game</Link>
                             </div>
                             <div>
-                                <button disabled={password ? true : false} onClick={randomPassword} className="block bg-shell-400 disabled:text-shell-300 text-shell-900 px-2 rounded uppercase text-sm">Get a Random Password</button>
+                                <button disabled={password ? true : false} onClick={randomPassword} className="block bg-shell-500 disabled:text-shell-300 text-shell-50 px-2 rounded uppercase text-sm">Get a Random Password</button>
                                 {password && <p>Your password is: <span className="uppercase tracking-widest">{password}</span></p>}
                             </div>
                         </Card>
@@ -194,6 +177,9 @@ export default function App() {
                 <Section id="blog" title="Writing">
                 </Section>
 
+                <Section id="art" title="Art">
+                </Section>
+
                 <Section id="open-source" title="Open Source Contributions">
                     <p>I've made a few contributions to open source projects that I've used.</p>
                     <div className="flex flex-wrap gap-4">
@@ -218,29 +204,4 @@ export default function App() {
             </div>
         </div>
     )
-}
-
-function Section({ id, title, children }: { id: string, title: string, children?: React.ReactNode }) {
-    return <section id={id} className="space-y-4">
-        <h2 className="text-lg">&rarr; {title}</h2>
-        {children}
-    </section>
-}
-
-function Card({ title, children }: { title: string, children?: React.ReactNode }) {
-    return <li className="border-2 border-shell-300 p-4 rounded space-y-2">
-        <h3 className="font-extrabold">{title}</h3>
-        {children}
-    </li>
-}
-
-function Link({ href, children }: { href: string, children: React.ReactNode }) {
-    return <a
-        href={href}
-        target={href.startsWith("http") ? "_blank" : undefined}
-        rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
-        className="border-b border-coral-500 hover:border-coral-200 transition-opacity duration-175"
-    >
-        {children}
-    </a>
 }

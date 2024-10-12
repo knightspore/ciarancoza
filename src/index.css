@@ -1,13 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Karla";
+    src: url("./assets/fonts/Karla-Regular.ttf") format("truetype");
+    display: swap;
+}
+
+
 @font-face {
     font-family: "Iosevka";
     src: url("./assets/fonts/Iosevka-Regular.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
+    display: swap;
 }
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 @layer base {
 
@@ -44,6 +52,14 @@
         --lipstick-700: #73414F;
         --lipstick-800: #56313B;
         --lipstick-900: #3A2028;
+
+        --font-sans: "Karla", sans-serif;
+        --font-mono: "Iosevka", monospace;
+    }
+
+    body {
+        color: var(--shell-900);
+        background: var(--shell-50);
     }
 }
 
