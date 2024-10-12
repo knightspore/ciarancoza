@@ -1,0 +1,50 @@
+@font-face {
+    font-family: "Iosevka";
+    src: url("./assets/fonts/Iosevka-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    :root {
+        --coral-50: #FFF8F9;
+        --coral-100: #FEF1F2;
+        --coral-200: #FDDCDF;
+        --coral-300: #FBC7CC;
+        --coral-400: #F99CA6;
+        --coral-500: #F67280;
+        --coral-600: #DD6773;
+        --coral-700: #94444D;
+        --coral-800: #6F333A;
+        --coral-900: #4A2226;
+
+        --shell-50: #F5F7F9;
+        --shell-100: #EBEFF2;
+        --shell-200: #CDD6DF;
+        --shell-300: #AEBECB;
+        --shell-400: #728DA4;
+        --shell-500: #355C7D;
+        --shell-600: #305371;
+        --shell-700: #20374B;
+        --shell-800: #182938;
+        --shell-900: #101C26;
+
+        --lipstick-50: #FCF8F9;
+        --lipstick-100: #F9F0F3;
+        --lipstick-200: #EFDAE0;
+        --lipstick-300: #E6C4CE;
+        --lipstick-400: #D398A9;
+        --lipstick-500: #C06C84;
+        --lipstick-600: #AD6177;
+        --lipstick-700: #73414F;
+        --lipstick-800: #56313B;
+        --lipstick-900: #3A2028;
+    }
+}
+
+;
