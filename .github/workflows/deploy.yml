@@ -18,3 +18,9 @@ jobs:
         - run: yarn
         - run: yarn build
         - run: ls -la dist
+        - uses: appleboy/ssh-action@v1.1.0
+          with:
+            host: ${{ secrets.HOST }}
+            username: ${{ secrets.USER }}
+            key: ${{ secrets.PASS }}
+            script: whoami
