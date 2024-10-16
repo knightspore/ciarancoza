@@ -9,7 +9,7 @@ on:
 jobs:
   deploy:
     name: build-and-deploy
-    runs-on: debian-latest
+    runs-on: ubuntu-latest
     steps:
         - uses: actions/checkout@v4 
         - uses: oven-sh/setup-bun@v2
