@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import Link from "./components/link"
-import Card from "./components/card"
 import Section from "./components/section"
+import Card from "./components/card"
 import Nav from "./components/nav"
 
 

@@ -1,7 +1,9 @@
 import Link from "./link";
+import { Link as TLink } from "@tanstack/react-router";
 
 export default function Nav() {
-    return <nav className="mb-4 flex flex-wrap gap-4 uppercase text-sm font-medium">
+    return <nav className="flex flex-wrap gap-4 uppercase text-sm font-medium">
+        <TLink href="/"><span className="text-coral-500">&gt;</span> Home</TLink>
         <Link href="#projects"><span className="text-coral-500">&gt;</span> Projects</Link>
         <Link href="#music"><span className="text-coral-500">&gt;</span> Music</Link>
         <Link href="#blog"><span className="text-coral-500">&gt;</span> Writing</Link>
