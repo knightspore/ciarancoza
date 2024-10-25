@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: "Karla";
-    src: url("./assets/fonts/Karla-Regular.ttf") format("truetype");
+    font-family: "Archivo";
+    src: url("./assets/fonts/Archivo-Regular.ttf") format("truetype");
     display: swap;
 }
 
@@ -53,7 +53,7 @@
         --lipstick-800: #56313B;
         --lipstick-900: #3A2028;
 
-        --font-sans: "Karla", sans-serif;
+        --font-sans: "Archivo", sans-serif;
         --font-mono: "Iosevka", monospace;
     }
 
