@@ -1,4 +1,3 @@
-import Header from "./components/header"
 import { useEffect, useState } from "react"
 import Link from "./components/link"
 import Card from "./components/card"
@@ -46,7 +45,6 @@ export default function App() {
     return (
         <div className="p-4 max-w-[800px] mx-auto pb-12">
             <Nav />
-            <Header />
             <div id="content" className="mt-8 space-y-8">
                 <Section
                     id="projects"
