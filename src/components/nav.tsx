@@ -14,7 +14,7 @@ const links = [
         label: 'Art ',
     }),
     linkOptions({
-        to: '/blog',
+        to: '/',
         label: 'Writing',
     }),
 ];
