@@ -1,14 +1,33 @@
-import Link from "./link";
-import { Link as TLink } from "@tanstack/react-router";
+import { Link, linkOptions } from "@tanstack/react-router";
+
+const links = [
+    linkOptions({
+        to: '/',
+        label: 'Home',
+    }),
+    linkOptions({
+        to: '/projects',
+        label: 'Projects & OSS',
+    }),
+    linkOptions({
+        to: '/art',
+        label: 'Art ',
+    }),
+    linkOptions({
+        to: '/blog',
+        label: 'Writing',
+    }),
+];
 
 export default function Nav() {
-    return <nav className="flex flex-wrap gap-4 uppercase text-sm font-medium">
-        <TLink href="/"><span className="text-coral-500">&gt;</span> Home</TLink>
-        <Link href="#projects"><span className="text-coral-500">&gt;</span> Projects</Link>
-        <Link href="#music"><span className="text-coral-500">&gt;</span> Music</Link>
-        <Link href="#blog"><span className="text-coral-500">&gt;</span> Writing</Link>
-        <Link href="#art"><span className="text-coral-500">&gt;</span> Art</Link>
-        <Link href="#open-source"><span className="text-coral-500">&gt;</span> Open Source</Link>
-        <Link href="#contact"><span className="text-coral-500">&gt;</span> Contact</Link>
+    return <nav className="flex flex-wrap gap-2 md:gap-4 uppercase text-sm font-medium">
+        {links.map((link) => (<Link
+            key={link.label}
+            className="transition-all duration-175 flex items-center gap-px"
+            activeProps={{ className: 'text-coral-500' }}
+            {...link}
+        >
+            <span className="text-coral-500">&gt;</span> {link.label}
+        </Link>))}
     </nav>
 }
