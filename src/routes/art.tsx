@@ -1,5 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 import Section from '../components/section'
+import SEO from '../components/seo'
 
 export const Route = createFileRoute('/art')({
     component: Art,
@@ -7,7 +8,14 @@ export const Route = createFileRoute('/art')({
 })
 
 function Art() {
-    return (
+    return <>
+        <SEO
+            title="Music, Art & Design"
+            description="Various bits of music, 2D and 3D art, design work and some modelling I've done over the years"
+            keywords={["Art", "Design", "Music", "Parabyl", "Three Witches", "Ciarán Slemon"]}
+            image="https://ciaran.co.za/img/logo-square.png"
+            url="https://ciaran.co.za/art"
+        />
         <Section id="music" title="Music">
             <p>
                 I've released a number of albums, singles and EPs as Parabyl, as well
@@ -46,6 +54,5 @@ function Art() {
                 />
             </div>
         </Section>
-
-    )
+    </>
 }

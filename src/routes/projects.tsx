@@ -3,6 +3,7 @@ import { useState } from "react"
 import Section from "../components/section"
 import Card from "../components/card"
 import Link from "../components/link"
+import SEO from '../components/seo'
 
 const KEYWORD_MAP = [
     ["hitch", "hiker"],
@@ -39,6 +40,13 @@ function Projects() {
     }
 
     return <>
+        <SEO
+            title="Apps, Projects & Experiments"
+            description="A collection of projects, experiments and apps I've worked on."
+            keywords={["XML", "Spotify", "Trivia", "RSS", "Go", "Typescript", "Machine Learning", "Event Sourcing", "Web Development", "Software Engineering", "Ciarán Slemon"]}
+            image="https://ciaran.co.za/img/logo-square.png"
+            url="https://ciaran.co.za/projects"
+        />
         <Section
             id="projects"
             title="Projects &amp; Experiments"

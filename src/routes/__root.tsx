@@ -1,6 +1,7 @@
 import { createRootRoute, Outlet } from "@tanstack/react-router"
 import Nav from "../components/nav"
 import Footer from "../components/footer";
+import SEO from "../components/seo";
 
 export const Route = createRootRoute({
     component: BaseLayout,
@@ -10,13 +11,16 @@ export const Route = createRootRoute({
 });
 
 function BaseLayout() {
-    return <div className="p-4 max-w-[800px] mx-auto pb-12 flex flex-col min-h-screen">
-        <Nav />
-        <div className="my-4 grow space-y-8">
-            <Outlet />
+    return <>
+        <SEO />
+        <div className="p-4 max-w-[800px] mx-auto pb-12 flex flex-col min-h-screen">
+            <Nav />
+            <div className="my-4 grow space-y-8">
+                <Outlet />
+            </div>
+            <Footer />
         </div>
-        <Footer />
-    </div>
+    </>
 }
 
 function Pending() {

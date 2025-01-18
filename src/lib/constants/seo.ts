@@ -1,5 +1,5 @@
 export const DEFAULT_SEO = {
-    title: "Software Engineer",
+    title: "Ciarán Slemon | Full Stack Software Engineer",
     titleTemplate: "%s | Ciarán Slemon",
     description:
         "I'm Ciarán, a software engineer, marketer and designer from Cape Town.",
@@ -17,8 +17,9 @@ export const DEFAULT_SEO = {
         ],
     },
     twitter: {
-        handle: "@parabyl",
-        cardType: "summary_large_image",
+        cardType: "summary",
+        site: "https://ciaran.co.za/",
+        creator: "@parabyl",
     },
 };
 

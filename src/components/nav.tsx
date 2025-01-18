@@ -13,10 +13,10 @@ const links = [
         to: '/art',
         label: 'Art ',
     }),
-    linkOptions({
-        to: '/',
-        label: 'Writing',
-    }),
+    // linkOptions({
+    //     to: '/blog',
+    //     label: 'Blog',
+    // }),
 ];
 
 export default function Nav() {
