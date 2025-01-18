@@ -51,7 +51,7 @@ function Projects() {
             id="projects"
             title="Projects &amp; Experiments"
         >
-            <ul className="mt-4 space-y-4">
+            <ul className="grid gap-5">
 
                 <Card title="🖥️ XML Trap">
                     <p>
@@ -145,16 +145,32 @@ function Projects() {
         </Section>
         <Section id="open-source" title="Open Source Contributions">
             <p>I've made a few contributions to open source projects that I've used.</p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex items-center flex-wrap gap-4">
+                <Link href="https://github.blog/open-source/social-impact/skilling-african-developers-through-all-in-africa/" target="_blank">■ GitHub's <a href="/certificates/all-in-open-source.pdf" target="_blank">All-In Africa</a> 2023 Cohort</Link>
                 <Link href="https://github.com/oven-sh/bun/pull/7983">■ oven-sh/bun #7983: Testing Documentation</Link>
                 <Link href="https://github.com/oven-sh/bun/pull/7800">■ oven-sh/bun #7800: Testing Documentation</Link>
                 <Link href="https://github.com/oven-sh/bun/pull/7766">■ oven-sh/bun #7766: Testing Documentation</Link>
                 <Link href="https://github.com/gridsome/gridsome.org/pull/533">■ gridsome/gridsome.org #533: TailwindCSS Starter</Link>
             </div>
         </Section>
-        <Section id="course-certificates" title="Courses & Tutorials I've Done">
-            <p>While I often learn in practice or through experimentation, I've taken a few courses and tutorials to learn new concepts.</p>
-            {/* TODO: Add more courses */}
+        <Section id="learning-tutorials" title="Learning">
+            <p>
+                While I often learn in practice or through experimentation, there's nothing like a good teacher.
+                Here are some learning materials I've found educational and enjoyable.
+            </p>
+            <div className="flex items-center flex-wrap gap-4">
+                <p>🌐</p>
+                <Link href="https://developer.mozilla.org/en-US/">■ MDN Web Docs</Link>
+                <Link href="https://github.com/rust-lang/rustlings">■ Rustlings</Link>
+                <Link href="https://quii.gitbook.io/learn-go-with-tests">■ Learn Go with Tests</Link>
+                <p>📚</p>
+                <Link href="https://justjavascript.com/">■ Just Javascript</Link>
+                <Link href="https://www.refactoringui.com/">■ Refactoring UI</Link>
+                <Link href="https://www.oreilly.com/library/view/typescript-cookbook/9781098136642/">■ Typescript Cookbook</Link>
+                <Link href="https://laravel-beyond-crud.com/">■ Laravel Beyond CRUD</Link>
+                <Link href="https://www.gopl.io/">■ The Go Programming Language</Link>
+                <Link href="https://www.manning.com/books/grokking-algorithms">■ Grokking Algorithms</Link>
+            </div>
         </Section>
     </>
 }

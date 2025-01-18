@@ -19,7 +19,7 @@ function Art() {
         <Section id="music" title="Music">
             <p>
                 I've released a number of albums, singles and EPs as Parabyl, as well
-                as in my previous band Three Witches. Here are some of my favourites:
+                as in my previous band Three Witches.
             </p>
             <div className="flex flex-col md:flex-row md:flex-wrap items-center gap-4">
                 <div
