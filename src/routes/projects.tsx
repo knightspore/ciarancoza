@@ -106,7 +106,7 @@ export const Route = createFileRoute('/projects')({
                         <p>A <Link href="https://parabyl.co.za/">fun little web page</Link> I made for an EP release.</p>
                     </Card>
 
-                    <Card title="Go Experiments">
+                    <Card title="🎨 Go Experiments">
                         <p>
                             Having both worked with Go professionally, and loving it as a hobby language, I've got a number of small projects in this language. At times,
                             because it is the better tool for the job - and at other times just because it's a fun language to work with.
