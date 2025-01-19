@@ -106,7 +106,7 @@ function Projects() {
                     </p>
                     <p>You can check out the project at the link below, and get a random password underneath that. Get a friend to open this page and try and find matching clues!</p>
                     <div>
-                        <Link href="https://talis-42.vercel.app/">Play the Game</Link>
+                        <Link href="https://42.ciaran.co.za/">Play the Game</Link>
                     </div>
                     <div>
                         <button disabled={password ? true : false} onClick={randomPassword} className="block bg-shell-500 disabled:text-shell-300 text-shell-50 px-2 rounded uppercase text-sm">Get a Random Password</button>
