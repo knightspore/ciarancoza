@@ -10,8 +10,8 @@
 
 
 @font-face {
-    font-family: "Iosevka";
-    src: url("./assets/fonts/Iosevka-Regular.woff2") format("woff2");
+    font-family: "Victor Mono";
+    src: url("./assets/fonts/VictorMono-Regular.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
     display: swap;
@@ -54,7 +54,7 @@
         --lipstick-900: #3A2028;
 
         --font-sans: "Archivo", sans-serif;
-        --font-mono: "Iosevka", monospace;
+        --font-mono: "Victor Mono", monospace;
     }
 
     body {
