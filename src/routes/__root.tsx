@@ -15,7 +15,7 @@ function BaseLayout() {
         <SEO />
         <div className="p-4 max-w-[800px] mx-auto pb-12 flex flex-col min-h-screen">
             <Nav />
-            <div className="my-4 grow space-y-8">
+            <div className="my-4 grow flex flex-col gap-8">
                 <Outlet />
             </div>
             <Footer />

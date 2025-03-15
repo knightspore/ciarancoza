@@ -109,7 +109,7 @@ function Projects() {
                         <Link href="https://42.ciaran.co.za/">Play the Game</Link>
                     </div>
                     <div>
-                        <button disabled={password ? true : false} onClick={randomPassword} className="block bg-shell-500 disabled:text-shell-300 text-shell-50 px-2 rounded uppercase text-sm">Get a Random Password</button>
+                        <button disabled={password ? true : false} onClick={randomPassword} className="block bg-shell-500 disabled:text-shell-300 text-shell-50 px-2 rounded-sm uppercase text-sm">Get a Random Password</button>
                         {password && <p>Your password is: <span className="uppercase tracking-widest">{password}</span></p>}
                     </div>
                 </Card>
@@ -146,7 +146,7 @@ function Projects() {
         <Section id="open-source" title="Open Source Contributions">
             <p>I've made a few contributions to open source projects that I've used.</p>
             <div className="flex items-center flex-wrap gap-4">
-                <Link href="https://github.blog/open-source/social-impact/skilling-african-developers-through-all-in-africa/" target="_blank">■ GitHub's <a href="/certificates/all-in-open-source.pdf" target="_blank">All-In Africa</a> 2023 Cohort</Link>
+                <span><Link href="https://github.blog/open-source/social-impact/skilling-african-developers-through-all-in-africa/" target="_blank">■ GitHub's All-In-Africa 2023 Cohort</Link> [<a href="/certificates/all-in-open-source.pdf" target="_blank" className="opacity-50">Certificate</a>]</span>
                 <Link href="https://github.com/oven-sh/bun/pull/7983">■ oven-sh/bun #7983: Testing Documentation</Link>
                 <Link href="https://github.com/oven-sh/bun/pull/7800">■ oven-sh/bun #7800: Testing Documentation</Link>
                 <Link href="https://github.com/oven-sh/bun/pull/7766">■ oven-sh/bun #7766: Testing Documentation</Link>
