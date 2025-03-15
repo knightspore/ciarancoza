@@ -2,6 +2,7 @@ import { createRootRoute, Outlet } from "@tanstack/react-router"
 import Nav from "../components/nav"
 import Footer from "../components/footer";
 import SEO from "../components/seo";
+import { HelmetProvider } from "react-helmet-async";
 
 export const Route = createRootRoute({
     component: BaseLayout,
@@ -11,7 +12,7 @@ export const Route = createRootRoute({
 });
 
 function BaseLayout() {
-    return <>
+    return <HelmetProvider>
         <SEO />
         <div className="p-4 max-w-[800px] mx-auto pb-12 flex flex-col min-h-screen">
             <Nav />
@@ -20,7 +21,7 @@ function BaseLayout() {
             </div>
             <Footer />
         </div>
-    </>
+    </HelmetProvider>
 }
 
 function Pending() {
