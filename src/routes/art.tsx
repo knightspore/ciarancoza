@@ -1,6 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import Section from '../components/section'
 import SEO from '../components/seo'
+import Title from '../components/page-title'
 
 export const Route = createFileRoute('/art')({
     component: Art,
@@ -9,8 +10,11 @@ export const Route = createFileRoute('/art')({
 
 function Art() {
     return <>
+        <Title subtitle="Music, Art & Design" >
+            Art I've Made
+        </Title>
         <SEO
-            title="Music, Art & Design"
+            title="Music, Graphic Design & Interactive Art"
             description="Various bits of music, 2D and 3D art, design work and some modelling I've done over the years"
             keywords={["Art", "Design", "Music", "Parabyl", "Three Witches", "Ciarán Slemon"]}
             image="https://ciaran.co.za/img/logo-square.png"

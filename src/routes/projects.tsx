@@ -4,6 +4,7 @@ import Section from "../components/section"
 import Card from "../components/card"
 import Link from "../components/link"
 import SEO from '../components/seo'
+import Title from '../components/page-title'
 
 const KEYWORD_MAP = [
     ["hitch", "hiker"],
@@ -40,6 +41,7 @@ function Projects() {
     }
 
     return <>
+        <Title subtitle="Apps, Experiments & Open Source">Software Projects</Title>
         <SEO
             title="Apps, Projects & Experiments"
             description="A collection of projects, experiments and apps I've worked on."

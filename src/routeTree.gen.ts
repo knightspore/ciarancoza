@@ -11,11 +11,18 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
+import { Route as ReadImport } from './routes/read'
 import { Route as ProjectsImport } from './routes/projects'
 import { Route as ArtImport } from './routes/art'
 import { Route as IndexImport } from './routes/index'
 
 // Create/Update Routes
+
+const ReadRoute = ReadImport.update({
+  id: '/read',
+  path: '/read',
+  getParentRoute: () => rootRoute,
+} as any)
 
 const ProjectsRoute = ProjectsImport.update({
   id: '/projects',
@@ -60,6 +67,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjectsImport
       parentRoute: typeof rootRoute
     }
+    '/read': {
+      id: '/read'
+      path: '/read'
+      fullPath: '/read'
+      preLoaderRoute: typeof ReadImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
@@ -69,12 +83,14 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/art': typeof ArtRoute
   '/projects': typeof ProjectsRoute
+  '/read': typeof ReadRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/art': typeof ArtRoute
   '/projects': typeof ProjectsRoute
+  '/read': typeof ReadRoute
 }
 
 export interface FileRoutesById {
@@ -82,14 +98,15 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/art': typeof ArtRoute
   '/projects': typeof ProjectsRoute
+  '/read': typeof ReadRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/art' | '/projects'
+  fullPaths: '/' | '/art' | '/projects' | '/read'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/art' | '/projects'
-  id: '__root__' | '/' | '/art' | '/projects'
+  to: '/' | '/art' | '/projects' | '/read'
+  id: '__root__' | '/' | '/art' | '/projects' | '/read'
   fileRoutesById: FileRoutesById
 }
 
@@ -97,12 +114,14 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ArtRoute: typeof ArtRoute
   ProjectsRoute: typeof ProjectsRoute
+  ReadRoute: typeof ReadRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ArtRoute: ArtRoute,
   ProjectsRoute: ProjectsRoute,
+  ReadRoute: ReadRoute,
 }
 
 export const routeTree = rootRoute
@@ -117,7 +136,8 @@ export const routeTree = rootRoute
       "children": [
         "/",
         "/art",
-        "/projects"
+        "/projects",
+        "/read"
       ]
     },
     "/": {
@@ -128,6 +148,9 @@ export const routeTree = rootRoute
     },
     "/projects": {
       "filePath": "projects.tsx"
+    },
+    "/read": {
+      "filePath": "read.tsx"
     }
   }
 }

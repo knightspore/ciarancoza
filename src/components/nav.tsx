@@ -14,8 +14,8 @@ const links = [
         label: 'Art ',
     }),
     // linkOptions({
-    //     to: '/blog',
-    //     label: 'Blog',
+    //     to: '/read',
+    //     label: 'Read',
     // }),
 ];
 
