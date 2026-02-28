@@ -1,10 +1,10 @@
 export const DEFAULT_SEO = {
-    title: "Ciarán Slemon | Full Stack Software Engineer",
+    title: "Ciarán Slemon | Full Stack Software Engineer in Cape Town",
     titleTemplate: "%s | Ciarán Slemon",
     description:
-        "I'm Ciarán, a software engineer, marketer and designer from Cape Town.",
+        "I'm Ciarán, a software engineer, creative and tinkerer from Cape Town.",
     keywords:
-        "Software Engineer, Portfolio, Ciarán Slemon, Typescript, Go, Cape Town, South Africa",
+        "Full Stack, Software Engineer, Cape Town, Ciarán Slemon, React, Typescript, Go, Digital Art, South Africa",
     openGraph: {
         type: "website",
         locale: "en",
