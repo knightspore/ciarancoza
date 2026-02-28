@@ -8,32 +8,76 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
-import { Route as rootRouteImport } from './routes/__root'
-import { Route as ReadRouteImport } from './routes/read'
-import { Route as ProjectsRouteImport } from './routes/projects'
-import { Route as ArtRouteImport } from './routes/art'
-import { Route as IndexRouteImport } from './routes/index'
+// Import Routes
 
-const ReadRoute = ReadRouteImport.update({
+import { Route as rootRoute } from './routes/__root'
+import { Route as ReadImport } from './routes/read'
+import { Route as ProjectsImport } from './routes/projects'
+import { Route as ArtImport } from './routes/art'
+import { Route as IndexImport } from './routes/index'
+
+// Create/Update Routes
+
+const ReadRoute = ReadImport.update({
   id: '/read',
   path: '/read',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => rootRoute,
 } as any)
-const ProjectsRoute = ProjectsRouteImport.update({
+
+const ProjectsRoute = ProjectsImport.update({
   id: '/projects',
   path: '/projects',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => rootRoute,
 } as any)
-const ArtRoute = ArtRouteImport.update({
+
+const ArtRoute = ArtImport.update({
   id: '/art',
   path: '/art',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => rootRoute,
 } as any)
-const IndexRoute = IndexRouteImport.update({
+
+const IndexRoute = IndexImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => rootRoute,
 } as any)
+
+// Populate the FileRoutesByPath interface
+
+declare module '@tanstack/react-router' {
+  interface FileRoutesByPath {
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexImport
+      parentRoute: typeof rootRoute
+    }
+    '/art': {
+      id: '/art'
+      path: '/art'
+      fullPath: '/art'
+      preLoaderRoute: typeof ArtImport
+      parentRoute: typeof rootRoute
+    }
+    '/projects': {
+      id: '/projects'
+      path: '/projects'
+      fullPath: '/projects'
+      preLoaderRoute: typeof ProjectsImport
+      parentRoute: typeof rootRoute
+    }
+    '/read': {
+      id: '/read'
+      path: '/read'
+      fullPath: '/read'
+      preLoaderRoute: typeof ReadImport
+      parentRoute: typeof rootRoute
+    }
+  }
+}
+
+// Create and export the route tree
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -41,19 +85,22 @@ export interface FileRoutesByFullPath {
   '/projects': typeof ProjectsRoute
   '/read': typeof ReadRoute
 }
+
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/art': typeof ArtRoute
   '/projects': typeof ProjectsRoute
   '/read': typeof ReadRoute
 }
+
 export interface FileRoutesById {
-  __root__: typeof rootRouteImport
+  __root__: typeof rootRoute
   '/': typeof IndexRoute
   '/art': typeof ArtRoute
   '/projects': typeof ProjectsRoute
   '/read': typeof ReadRoute
 }
+
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths: '/' | '/art' | '/projects' | '/read'
@@ -62,44 +109,12 @@ export interface FileRouteTypes {
   id: '__root__' | '/' | '/art' | '/projects' | '/read'
   fileRoutesById: FileRoutesById
 }
+
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ArtRoute: typeof ArtRoute
   ProjectsRoute: typeof ProjectsRoute
   ReadRoute: typeof ReadRoute
-}
-
-declare module '@tanstack/react-router' {
-  interface FileRoutesByPath {
-    '/read': {
-      id: '/read'
-      path: '/read'
-      fullPath: '/read'
-      preLoaderRoute: typeof ReadRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/projects': {
-      id: '/projects'
-      path: '/projects'
-      fullPath: '/projects'
-      preLoaderRoute: typeof ProjectsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/art': {
-      id: '/art'
-      path: '/art'
-      fullPath: '/art'
-      preLoaderRoute: typeof ArtRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-  }
 }
 
 const rootRouteChildren: RootRouteChildren = {
@@ -108,6 +123,35 @@ const rootRouteChildren: RootRouteChildren = {
   ProjectsRoute: ProjectsRoute,
   ReadRoute: ReadRoute,
 }
-export const routeTree = rootRouteImport
+
+export const routeTree = rootRoute
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+/* ROUTE_MANIFEST_START
+{
+  "routes": {
+    "__root__": {
+      "filePath": "__root.tsx",
+      "children": [
+        "/",
+        "/art",
+        "/projects",
+        "/read"
+      ]
+    },
+    "/": {
+      "filePath": "index.tsx"
+    },
+    "/art": {
+      "filePath": "art.tsx"
+    },
+    "/projects": {
+      "filePath": "projects.tsx"
+    },
+    "/read": {
+      "filePath": "read.tsx"
+    }
+  }
+}
+ROUTE_MANIFEST_END */
