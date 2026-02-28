@@ -4,6 +4,7 @@ import Section from "../components/section"
 import Card from "../components/card"
 import Link from "../components/link"
 import SEO from '../components/seo'
+import Code from '../components/code'
 
 const KEYWORD_MAP = [
     ["hitch", "hiker"],
@@ -53,12 +54,22 @@ function Projects() {
         >
             <ul className="grid gap-5">
 
+                <Card title="🐘 Option/Result">
+                    <blockquote className="border-l-2 border-coral-500 pl-2 md:pl-4">"So you can take down ~20% of the internet, but with PHP"</blockquote>
+                    <p><Code>{"Option<T>"}</Code> represents an optional value. An option may be some or none, where <Code>some(T)</Code> contains a value and <Code>none</Code> does not.</p>
+                    <p><Code>{"Result<T,E>"}</Code> represents a success (<Code>ok(T)</Code>) or an error (<Code>err(E)</Code>).</p>
+                    <p>Try it out: <Code>composer require ciarancoza/option-result</Code></p>
+                    <div>
+                        <Link href="https://github.com/knightspore/option-result">OptionResult on Github</Link>
+                    </div>
+                </Card>
+
                 <Card title="🖥️ XML Trap">
                     <p>
                         A basic RSS/Atom feed parser written in Typescript, using Bun, with full test coverage. It can parse feeds and create an AST of the feed in JSON.
                         Very fun to write since there's so much writing online on XML parsers.
                     </p>
-                    <p>Try it out: <code className="bg-shell-500 text-shell-50 px-1 rounded">npm install xml-trap</code></p>
+                    <p>Try it out: <Code>npm install xml-trap</Code></p>
                     <div>
                         <Link href="https://github.com/knightspore/xml-trap/">XML Trap on Github</Link>
                     </div>
@@ -109,7 +120,7 @@ function Projects() {
                         <Link href="https://42.ciaran.co.za/">Play the Game</Link>
                     </div>
                     <div>
-                        <button disabled={password ? true : false} onClick={randomPassword} className="block bg-shell-500 disabled:text-shell-300 text-shell-50 px-2 rounded-sm uppercase text-sm">Get a Random Password</button>
+                        <button disabled={password ? true : false} onClick={randomPassword} className="cursor-pointer"><Code>Get a Random Password</Code></button>
                         {password && <p>Your password is: <span className="uppercase tracking-widest">{password}</span></p>}
                     </div>
                 </Card>
