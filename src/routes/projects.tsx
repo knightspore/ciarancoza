@@ -153,6 +153,7 @@ function Projects() {
                 <Link href="https://github.com/oven-sh/bun/pull/7800">■ oven-sh/bun #7800: Testing Documentation</Link>
                 <Link href="https://github.com/oven-sh/bun/pull/7766">■ oven-sh/bun #7766: Testing Documentation</Link>
                 <Link href="https://github.com/gridsome/gridsome.org/pull/533">■ gridsome/gridsome.org #533: TailwindCSS Starter</Link>
+                <Link href="https://github.com/permafrost-dev/node-ray/pull/328">■ permafrost-dev/node-ray #328: Fix ArgumentConverter Bug</Link>
             </div>
         </Section>
         <Section id="learning-tutorials" title="Learning">
