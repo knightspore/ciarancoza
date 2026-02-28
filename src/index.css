@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @font-face {
-    font-family: "Archivo";
-    src: url("./assets/fonts/Archivo-Regular.ttf") format("truetype");
+    font-family: "Atkinson Hyperlegible";
+    src: url("./assets/fonts/AtkinsonHyperlegible-Regular.ttf") format("truetype");
     font-display: swap;
 }
 
@@ -48,7 +48,7 @@
     --color-lipstick-800: #56313B;
     --color-lipstick-900: #3A2028;
 
-    --font-sans: "Archivo", sans-serif;
+    --font-sans: "Atkinson Hyperlegible", sans-serif;
     --font-mono: "Victor Mono", monospace;
 }
 
