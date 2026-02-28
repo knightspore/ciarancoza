@@ -4,7 +4,6 @@ import Section from "../components/section"
 import Card from "../components/card"
 import Link from "../components/link"
 import SEO from '../components/seo'
-import Title from '../components/page-title'
 
 const KEYWORD_MAP = [
     ["hitch", "hiker"],
@@ -41,7 +40,6 @@ function Projects() {
     }
 
     return <>
-        <Title subtitle="Apps, Experiments & Open Source">Software Projects</Title>
         <SEO
             title="Apps, Projects & Experiments"
             description="A collection of projects, experiments and apps I've worked on."
@@ -111,7 +109,7 @@ function Projects() {
                         <Link href="https://42.ciaran.co.za/">Play the Game</Link>
                     </div>
                     <div>
-                        <button disabled={password ? true : false} onClick={randomPassword} className="block bg-shell-500 disabled:text-shell-300 text-shell-50 px-2 uppercase text-sm">Get a Random Password</button>
+                        <button disabled={password ? true : false} onClick={randomPassword} className="block bg-shell-500 disabled:text-shell-300 text-shell-50 px-2 rounded-sm uppercase text-sm">Get a Random Password</button>
                         {password && <p>Your password is: <span className="uppercase tracking-widest">{password}</span></p>}
                     </div>
                 </Card>
@@ -145,18 +143,17 @@ function Projects() {
 
             </ul>
         </Section>
-        <Section id="open-source" title="Open Source Contributions">
+        <Section id="open-source" title="Open Source Contributions" className="mt-2 md:mt-4">
             <p>I've made a few contributions to open source projects that I've used.</p>
             <div className="flex items-center flex-wrap gap-4">
-                <span><Link href="https://github.blog/open-source/social-impact/skilling-african-developers-through-all-in-africa/" target="_blank">■ GitHub's All-In-Africa 2023 Cohort</Link> [<a href="/certificates/all-in-open-source.pdf" target="_blank" className="opacity-50">Certificate</a>]</span>
+                <Link href="https://github.blog/open-source/social-impact/skilling-african-developers-through-all-in-africa/" target="_blank">■ GitHub's <a href="/certificates/all-in-open-source.pdf" target="_blank">All-In Africa</a> 2023 Cohort</Link>
                 <Link href="https://github.com/oven-sh/bun/pull/7983">■ oven-sh/bun #7983: Testing Documentation</Link>
                 <Link href="https://github.com/oven-sh/bun/pull/7800">■ oven-sh/bun #7800: Testing Documentation</Link>
                 <Link href="https://github.com/oven-sh/bun/pull/7766">■ oven-sh/bun #7766: Testing Documentation</Link>
                 <Link href="https://github.com/gridsome/gridsome.org/pull/533">■ gridsome/gridsome.org #533: TailwindCSS Starter</Link>
-                <Link href="https://github.com/permafrost-dev/node-ray/pull/328">■ permafrost-dev/node-ray #328: Fix ArgumentConverter Bug</Link>
             </div>
         </Section>
-        <Section id="learning-tutorials" title="Learning">
+        <Section id="learning-tutorials" title="Learning" className="mt-2 md:mt-4">
             <p>
                 While I often learn in practice or through experimentation, there's nothing like a good teacher.
                 Here are some learning materials I've found educational and enjoyable.

@@ -14,7 +14,7 @@ export default function Link({ href, children, ...props }: Props) {
 
     return <a {...props}
         href={href}
-        className="border-b border-coral-500 hover:border-coral-200 transition-all duration-175"
+        className="shrink border-b border-coral-500 hover:border-coral-200 transition-all duration-175"
     >
         {children}
     </a>
