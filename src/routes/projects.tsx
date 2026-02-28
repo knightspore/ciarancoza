@@ -111,7 +111,7 @@ function Projects() {
                         <Link href="https://42.ciaran.co.za/">Play the Game</Link>
                     </div>
                     <div>
-                        <button disabled={password ? true : false} onClick={randomPassword} className="block bg-shell-500 disabled:text-shell-300 text-shell-50 px-2 rounded-sm uppercase text-sm">Get a Random Password</button>
+                        <button disabled={password ? true : false} onClick={randomPassword} className="block bg-shell-500 disabled:text-shell-300 text-shell-50 px-2 uppercase text-sm">Get a Random Password</button>
                         {password && <p>Your password is: <span className="uppercase tracking-widest">{password}</span></p>}
                     </div>
                 </Card>

@@ -14,13 +14,13 @@ export const Route = createRootRoute({
 function BaseLayout() {
     return <HelmetProvider>
         <SEO />
-        <div className="p-4 max-w-[800px] mx-auto pb-12 flex flex-col min-h-screen">
+        <main className="p-2 md:p-4 max-w-[800px] mx-auto pb-12 flex flex-col gap-2 md:gap-4 min-h-screen">
             <Nav />
-            <div className="my-4 grow flex flex-col gap-8">
+            <div className="flex-1">
                 <Outlet />
             </div>
             <Footer />
-        </div>
+        </main>
     </HelmetProvider>
 }
 
