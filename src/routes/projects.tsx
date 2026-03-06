@@ -64,6 +64,15 @@ function Projects() {
                     </div>
                 </Card>
 
+                <Card title="🛰️ Watcher">
+                    <p>This is a small proof of concept I worked on for an ascii art-style game where you are a satellite operator.</p>
+                    <p>I suppose it exists as a small art piece for now.</p>
+                    <img className="object-cover md:h-64" src="https://github.com/knightspore/computer-graphics-experiments/blob/main/watcher/example.png?raw=true" alt="Watcher satellite game screenshot" />
+                    <div>
+                        <Link href="https://github.com/knightspore/computer-graphics-experiments/watcher">Watcher on Github</Link>
+                    </div>
+                </Card>
+
                 <Card title="🖥️ XML Trap">
                     <p>
                         A basic RSS/Atom feed parser written in Typescript, using Bun, with full test coverage. It can parse feeds and create an AST of the feed in JSON.
@@ -72,6 +81,14 @@ function Projects() {
                     <p>Try it out: <Code>npm install xml-trap</Code></p>
                     <div>
                         <Link href="https://github.com/knightspore/xml-trap/">XML Trap on Github</Link>
+                    </div>
+                </Card>
+
+                <Card title="🚪 Raylib Dungeon">
+                    <p>I wanted to explore some game design concepts I'd been learning about, so I wrote some of a dungeon crawler to do so. It includes things like a map loader, animated sprites, and mostly-deferred lighting.</p>
+                    <img className="object-cover h-32 md:h-64" src="https://raw.githubusercontent.com/knightspore/raylib-dungeon/refs/heads/main/readme_img.png?raw=true" alt="Raylib dungeon crawler screenshot" />
+                    <div>
+                        <Link href="https://github.com/knightspore/raylib-dungeon">Raylib Dungeon on Github</Link>
                     </div>
                 </Card>
 
